@@ -31,38 +31,38 @@ public class Main extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocation((Toolkit.getDefaultToolkit().getScreenSize().width - 320) / 2, (Toolkit.getDefaultToolkit().getScreenSize().height - 340) / 2);
 
-        valueLabel.setSize(100,20);
-        valueLabel.setLocation(20,20);
+        valueLabel.setSize(100, 20);
+        valueLabel.setLocation(20, 20);
         valueLabel.setVisible(true);
         frame.add(valueLabel);
 
-        firsDigit.setSize(100,20);
-        firsDigit.setLocation(130,20);
+        firsDigit.setSize(100, 20);
+        firsDigit.setLocation(130, 20);
         firsDigit.setVisible(true);
         frame.add(firsDigit);
 
-        from.setSize(70,20);
-        from.setLocation(240,20);
+        from.setSize(70, 20);
+        from.setLocation(240, 20);
         from.setVisible(true);
         frame.add(from);
 
-        newValueLabel.setSize(100,20);
-        newValueLabel.setLocation(20,60);
+        newValueLabel.setSize(100, 20);
+        newValueLabel.setLocation(20, 60);
         newValueLabel.setVisible(true);
         frame.add(newValueLabel);
 
-        secondDigit.setSize(100,20);
-        secondDigit.setLocation(130,60);
+        secondDigit.setSize(100, 20);
+        secondDigit.setLocation(130, 60);
         secondDigit.setVisible(true);
         frame.add(secondDigit);
 
-        to.setSize(70,20);
-        to.setLocation(240,60);
+        to.setSize(70, 20);
+        to.setLocation(240, 60);
         to.setVisible(true);
         frame.add(to);
 
-        convert.setSize(200,40);
-        convert.setLocation(60,100);
+        convert.setSize(200, 40);
+        convert.setLocation(60, 100);
         convert.setVisible(true);
         convert.addActionListener(e -> convertMethod());
         frame.add(convert);
@@ -76,7 +76,7 @@ public class Main extends JFrame {
                 String toCurr = to.getSelectedItem().toString();
                 double amount = Double.parseDouble(firsDigit.getText());
                 secondDigit.setText(port.convertToStr("", fromCurr, toCurr, amount, true, "", "", ""));
-            } catch (Exception ex){
+            } catch (Exception ex) {
                 secondDigit.setText("0");
             }
         } else {
@@ -85,7 +85,7 @@ public class Main extends JFrame {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Main main = new Main();
     }
 }
